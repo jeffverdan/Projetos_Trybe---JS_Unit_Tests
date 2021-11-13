@@ -33,7 +33,7 @@ const sum = (numArray) => {
 
 const average = (numArray) => {
   if (verifyTypeOf) {
-    return sum(numArray) / numArray.length;
+    return Math.round(sum(numArray) / numArray.length);
   } 
   return undefined;
 };
