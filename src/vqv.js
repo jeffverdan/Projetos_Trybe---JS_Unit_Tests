@@ -18,7 +18,9 @@
 
 const vqv = (myName, myAge) => {
   if (myName) {
-    return `Oi, meu nome é ${myName}!\nTenho ${myAge} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
+    const ans1 = `Oi, meu nome é ${myName}!\nTenho ${myAge} anos,\n`;
+    const ans2 = 'trabalho na Trybe e mando muito em programação!\n#VQV!';
+    return `${ans1}${ans2}`;
   }
   return undefined;
 };
