@@ -12,14 +12,12 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const verifyTypeOf = (numArray) => {
-  let isItNumber = true;
   for (let index = 0; index < numArray.length; index += 1) {
-    let element = numArray[index];
-    if (typeof element !== 'number') {
-      isItNumber = false;
+    if (typeof numArray[index] !== 'number') {
+      return false;
     }
   }
-  return isItNumber;
+  return true;
 };
 
 const sum = (numArray) => {
@@ -32,7 +30,7 @@ const sum = (numArray) => {
 };
 
 const average = (numArray) => {
-  if (verifyTypeOf) {
+  if (verifyTypeOf(numArray) && numArray.length !== 0) {
     return Math.round(sum(numArray) / numArray.length);
   } 
   return undefined;
