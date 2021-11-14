@@ -28,12 +28,13 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // fail('Teste vazio!');
     
     // ESCREVA SEUS TESTES ABAIXO:
+    const circle = circle(3)
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
     expect(circle('')).toBeUndefined();
     expect(circle([])).toBeUndefined();
     expect(circle('1')).toBeUndefined();
     // Teste se circle retorna um objeto.
-    expect(circle(3)).toMatchObject({ radius: 3, area: 28.259999999999998, circumference: 18.84})
+    expect(typeof circle).toBe('object')
     // Teste se o objeto retornado tem 3 propriedades.
     expect(circle(10)).toHaveProperty('radius', 'area', 'circumference')
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
