@@ -4,6 +4,7 @@
     - mult;
     - div;
     - sub.
+    
   Para cada chave atribua como valor a operação correspondente à sua chave:
     - sum: retorna o resultado da soma dos dois números;
     - mult: retorna o resultado da multiplicação dos dois números;
@@ -33,8 +34,13 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => ({
+    sum: number1 + number2,
+    mult: number1 * number2,
+    div: Math.trunc(number1 / number2),
+    sub: number1 - number2,
+  });
 
-const arrayGenerator = (type, object) => {};
+const arrayGenerator = (type, object) => Object[type](object);
 
 module.exports = { calculator, arrayGenerator };
