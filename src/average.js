@@ -12,6 +12,26 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (lista) => {};
+function returnUndefined(lista) {
+  let listaPa = false;
+  if (lista.length === 0 || typeof (lista) === 'string') {
+    listaPa = true;
+  }
+  return listaPa;
+}
+
+const average = (lista) => {
+  let soma = 0;
+  if (returnUndefined(lista)) {
+    return undefined;
+  }
+  for (let index = 0; index < lista.length; index += 1) {
+    if (returnUndefined(lista[index])) {
+      return undefined;
+    }
+    soma += lista[index];
+  }
+  return Math.round(soma / lista.length);
+};
 
 module.exports = average;
