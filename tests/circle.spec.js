@@ -31,7 +31,8 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(circle('not Number')).toBe(undefined);
 
     // Teste se circle retorna um objeto.
-    expect(Object.keys(circle(7))).toEqual(["radius", "area", "circumference"]);
+    const testObject = circle(1);
+    expect(testObject.area + testObject.circumference + testObject.radius).toBeCloseTo(10.42);
 
     // Teste se o objeto retornado tem 3 propriedades.
     expect(Object.keys(circle(1))).toEqual(["radius", "area", "circumference"]);
