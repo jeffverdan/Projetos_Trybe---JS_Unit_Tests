@@ -16,6 +16,17 @@
       #VQV!'
 */
 
-const vqv = () => {};
+const verifyString = (string) => typeof string !== 'string';
+const verifyNumber = (number) => typeof number !== 'number';
+
+const vqv = (string, numero) => {
+if (verifyString(string) || verifyNumber(numero)) {
+  return undefined;
+}
+return `Oi, meu nome é ${string}!
+Tenho ${numero} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+};
 
 module.exports = vqv;
