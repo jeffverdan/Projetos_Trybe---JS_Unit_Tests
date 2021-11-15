@@ -12,6 +12,20 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (vetor) => {
+  let somador = 0;
+  let media = 0;
+  if (vetor.length === 0) {
+    return undefined;
+  }
+  for (let numero of vetor) {
+    if (typeof numero !== 'number') {
+      return undefined;
+    }
+    somador += numero;
+  }
+  media = somador / vetor.length;
+  return Math.round(media);
+};
 
 module.exports = average;
