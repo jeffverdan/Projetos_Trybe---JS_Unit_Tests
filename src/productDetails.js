@@ -39,4 +39,9 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+let testando123 = 'testando123';
+console.log(testando123.slice(-3));
+
+console.log(productDetails()[0].details.productId.slice(-3));
+
 module.exports = productDetails;

@@ -1,3 +1,4 @@
+const { TestScheduler } = require('jest');
 const productDetails = require('../src/productDetails');
 
 /*
@@ -28,13 +29,29 @@ const productDetails = require('../src/productDetails');
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-    fail('Teste vazio!');
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se productDetails é uma função.
-    // Teste se o retorno da função é um array.
-    // Teste se o array retornado pela função contém dois itens dentro.
-    // Teste se os dois itens dentro do array retornado pela função são objetos.
-    // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
-    // Teste se os dois productIds terminam com 123.
+    expect(productDetails('arroz', 'feijão')).toEqual([
+      { name: 'arroz', details: { productId: 'arroz123' } },
+      { name: 'feijão', details: { productId: 'feijão123' } },
+    ]);
   });
+  test('Verifica se productDetails é uma função', () => {
+    expect(typeof productDetails).toBe('function');
+  });
+  test('Verifica se o retorno da função é um array', () => {
+    expect(Array.isArray(productDetails('arroz', 'feijão'))).toBeTruthy();
+  });
+  test('Verifica o array retornado pela função contém dois itens dentro', () => {
+    expect(Object.keys(productDetails('arroz', 'feijão')).length).toBe(2);
+  });
+  test('Verifica se os dois itens dentro do array retornado pela função são objetos', () => {
+    const resultado = productDetails('arroz', 'feijão');
+    expect(typeof(resultado[0]) && typeof(resultado[1])).toBe('object');
+  });
+  test('Verifica se quando passado parâmetros diferentes entre sí, os dois objetos também são diferentes entre sí', () => {
+    const resultado = productDetails('arroz', 'feijão');
+    expect(resultado[0] === resultado[1]).toBeFalsy();
+  });
+  test('Verifica se os dois productIds terminam com 123', () => {
+    expect(productDetails()[0].details.productId.slice(-3) && productDetails()[1].details.productId.slice(-3)).toBe('123')
+  })
 });
