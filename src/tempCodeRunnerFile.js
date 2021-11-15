@@ -1,9 +1,9 @@
-const average = (arr) => {
-  let soma = 0;
-  let media = 0
-  for (let i = 0; i < arr.length; i += 1) {
-    soma = arr[i];
-    soma += soma;
-    return soma;
-  } media = soma / arr.length;
-}; console.log(average([2, 2]));
+const vqv = (name, age) => {
+  const string = `Oi, meu nome é ${name}!
+Tenho ${age} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+  return string;
+}; console.log(vqv('Vinicius', 22));
+
+module.exports = vqv;
