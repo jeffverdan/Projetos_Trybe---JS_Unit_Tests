@@ -31,7 +31,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(circle('not Number')).toBe(undefined);
 
     // Teste se circle retorna um objeto.
-    expect(typeof circle(7)).toBe('object');
+    expect(Object.keys(circle(7))).toEqual(["radius", "area", "circumference"]);
 
     // Teste se o objeto retornado tem 3 propriedades.
     expect(Object.keys(circle(1))).toEqual(["radius", "area", "circumference"]);
