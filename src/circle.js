@@ -22,13 +22,17 @@
 const circle = (radius) => {
   const PI = 3.14;
 
-  if (!radius || typeof radius !== 'number') { return undefined; }
+  if (!radius || typeof radius !== 'number') {
+    return undefined;
+  }
 
   return {
     radius,
-    area: PI * radius * radius,
-    circumference: 2 * PI * radius,
+    area: Math.round(PI * radius * radius),
+    circumference: Math.round(2 * PI * radius),
   };
 };
+
+console.log(circle(2));
 
 module.exports = circle;
