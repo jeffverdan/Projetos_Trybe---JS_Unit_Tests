@@ -13,5 +13,5 @@
 */
 
 const average = () => {};
-
+// Bora lá
 module.exports = average;
