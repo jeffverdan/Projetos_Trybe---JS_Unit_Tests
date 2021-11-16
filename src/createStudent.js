@@ -19,7 +19,7 @@ const createStudent = (paramName, paramFeedback) => {
   const object = [];
   object.name = paramName;
   paramFeedback = () => 'Eita pessoa boa!';
-  object.feedback = paramFeedback
+  object.feedback = paramFeedback;
   return object;
 };
 
