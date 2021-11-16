@@ -13,21 +13,19 @@
 */
 
 const average = (myArray) => {
-  console.log('asdasfds');
   let valor = 0;
   let media = 0;
   if (myArray.length === 0) {
     return undefined;
   }
   for (let index = 0; index < myArray.length; index += 1) {
-    if (myArray[index] !== 'number') {
+    if (typeof myArray[index] !== 'number') {
       return undefined;
     }
-    console.log(valor);
     valor += myArray[index];
   }
-  media = valor / myArray.length;
-  return Math.round(media);
+  media = Math.round(valor / myArray.length);
+  return media;
 };
 
 module.exports = average;
