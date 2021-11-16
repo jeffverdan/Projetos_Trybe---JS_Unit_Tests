@@ -24,12 +24,9 @@ const vqv = (name, age) => {
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
-    // console.log(message);
-    return message
-  } else {
-    return undefined;
+    return message;
   }
+  return undefined;
 };
-// vqv('pedro', 29)
 
 module.exports = vqv;
