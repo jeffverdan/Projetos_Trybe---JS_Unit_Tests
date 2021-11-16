@@ -16,6 +16,17 @@
       #VQV!'
 */
 
-const vqv = () => {};
+const vqv = (nome, idade) => {
+  // if verifica se a variavel nome ou idade esta definida;
+  if (nome === undefined || idade === undefined) {
+    return undefined;
+  }
+  // variavel paragrafo recebe template literals com os parametros nome e idade e o texto.
+  let paragrafo = `Oi, meu nome é ${nome}!\n`
+    + `Tenho ${idade} anos,\n`
+    + 'trabalho na Trybe e mando muito em programação!\n'
+    + '#VQV!';
+    return paragrafo;
+};
 
 module.exports = vqv;
