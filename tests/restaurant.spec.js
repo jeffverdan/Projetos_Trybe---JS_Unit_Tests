@@ -108,13 +108,6 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado.order('coxinha');
     expectedArray = ['coxinha', 'agua', 'coxinha'];
     expect(objetoRetornado.consumption).toEqual(expectedArray);
-    // objetoRetornado.consumption // Retorno: ['coxinha', 'agua', 'coxinha']
-    // ```
-    // TESTE 8: Verifique se, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
-    // ```
-    // objetoRetornado.order('coxinha');
-    // objetoRetornado.order('agua');
-    // objetoRetornado.order('coxinha');
     const myMenuTest2 = {
       food: {'coxinha': 3.9, 'sopa': 9.9},
       drink: {'agua': 3.9, 'cerveja': 6.9},
@@ -125,7 +118,5 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
     expect(objetoRetornado.pay()).toBeCloseTo(12.87);
-    // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
-    // ```
   });
 });
