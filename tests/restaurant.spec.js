@@ -125,6 +125,6 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     novoObjetoRetornado.order('coxinha');
     novoObjetoRetornado.order('agua');
     novoObjetoRetornado.order('coxinha');
-    expect(novoObjetoRetornado.pay()).toBe('12.87')  
+    expect(novoObjetoRetornado.pay()).toBe(12.87)  
   });
 });

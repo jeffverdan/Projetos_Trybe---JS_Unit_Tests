@@ -45,32 +45,36 @@
 */
 
 const createMenu = (objeto) => {
-  // const todosProdutos = Object.entries(objeto.food);
-  // for (let bebidas of Object.entries(objeto.drinks)) {
-  //   todosProdutos.push(bebidas);
-  // }
+  const consumo = [];
 
-  // const consumo = [];
+  return { 
+    fetchMenu: () => objeto,
+    consuption: consumo,
+    order: (produto) => {
+      consumo.push(produto);
+    }, 
+    pay: () => {
+      let total = 0;
 
-  // return { 
-  //   fetchMenu: () => objeto,
-  //   consuption: consumo,
-  //   order: (produto) => {
-  //     consumo.push(produto);
-  //   }, 
-  //   pay: () => {
-  //     let pagamentoTotal = 0;
-  //     for (let produtoConsumido of consumo) {
-  //       for (let produto of todosProdutos) {
-  //         if (produtoConsumido === produto[0]) {
-  //           pagamentoTotal += produto[1];
-  //         }
-  //       }
-  //     }
-  //     pagamentoTotal += pagamentoTotal * 0.1;
-  //     return pagamentoTotal.toFixed(2);
-  //   },
-  // };
+      for (let produto of consumo) {
+        if (objeto.food[produto]) {
+          total += objeto.food[produto];
+        }
+        if (objeto.drinks[produto]) {
+          total += objeto.drinks[produto];
+        }
+      }
+      total += total * 0.1;
+      return total;
+    },
+  };
 };
+// const menu = createMenu({food: {'coxinha': 3.90, 'sanduiche': 9.90},
+// drinks: {'agua': 3.90, 'cerveja': 6.90}
+// })
+// menu.order('coxinha')
+// menu.order('agua')
+// menu.order('coxinha')
 
+// console.log(menu.pay())
 module.exports = createMenu;
