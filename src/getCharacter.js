@@ -68,4 +68,6 @@ const getCharacter = (name) => {
   return undefined;
 };
 
+console.log(getCharacter('Adrian'));
+
 module.exports = getCharacter;
