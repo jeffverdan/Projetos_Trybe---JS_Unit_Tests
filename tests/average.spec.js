@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 const average = require('../src/average');
-
+ //Primeira alteração
 /*
   A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos.
   Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado.
