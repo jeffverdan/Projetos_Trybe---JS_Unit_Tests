@@ -44,6 +44,29 @@
   
 */
 
-const createMenu = () => {};
+const createMenu = (objeto, string) => {
+  const arrayChaves = Object.keys(objeto);
+  function total() {
+    let valorPedido = 0;
+    for (let chave of arrayChaves) {
+      const totalProdutos = Object.values(chave);
+      for (let totalProduto of totalProdutos) {
+        valorPedido += total;
+      }
+    }
+    return total + total * 0.1;
+  }
+
+  const retorno = {
+    fetchMenu: () => objeto,
+    consuption: arrayChaves,
+    order: () => arrayChaves.push(string),
+    pay: total(),
+  };
+
+  return retorno;
+};
+
+console.log(createMenu);
 
 module.exports = createMenu;
