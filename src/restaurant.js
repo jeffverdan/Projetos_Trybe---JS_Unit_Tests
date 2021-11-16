@@ -45,32 +45,32 @@
 */
 
 const createMenu = (objeto) => {
-  const todosProdutos = Object.entries(objeto.food);
-  for (let bebidas of Object.entries(objeto.drinks)) {
-    todosProdutos.push(bebidas);
-  }
+  // const todosProdutos = Object.entries(objeto.food);
+  // for (let bebidas of Object.entries(objeto.drinks)) {
+  //   todosProdutos.push(bebidas);
+  // }
 
-  const consumo = [];
+  // const consumo = [];
 
-  return { 
-    fetchMenu: () => objeto,
-    consuption: consumo,
-    order: (produto) => {
-      consumo.push(produto);
-    }, 
-    pay: () => {
-      let pagamentoTotal = 0;
-      for (let produtoConsumido of consumo) {
-        for (let produto of todosProdutos) {
-          if (produtoConsumido === produto[0]) {
-            pagamentoTotal += produto[1];
-          }
-        }
-      }
-      pagamentoTotal += pagamentoTotal * 0.1;
-      return pagamentoTotal.toFixed(2);
-    },
-  };
+  // return { 
+  //   fetchMenu: () => objeto,
+  //   consuption: consumo,
+  //   order: (produto) => {
+  //     consumo.push(produto);
+  //   }, 
+  //   pay: () => {
+  //     let pagamentoTotal = 0;
+  //     for (let produtoConsumido of consumo) {
+  //       for (let produto of todosProdutos) {
+  //         if (produtoConsumido === produto[0]) {
+  //           pagamentoTotal += produto[1];
+  //         }
+  //       }
+  //     }
+  //     pagamentoTotal += pagamentoTotal * 0.1;
+  //     return pagamentoTotal.toFixed(2);
+  //   },
+  // };
 };
 
 module.exports = createMenu;
