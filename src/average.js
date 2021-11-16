@@ -13,5 +13,6 @@
 */
 
 const average = () => {};
+  console.log('teste');
 
 module.exports = average;
