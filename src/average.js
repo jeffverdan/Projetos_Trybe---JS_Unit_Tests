@@ -9,9 +9,22 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined
+    - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => { };
+const media = (e) => {
 
+};
+
+const average = (arr) => {
+  if (arr[0] === undefined) return undefined;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] !== 'number') return undefined;
+    sum += arr[i];
+  }
+  return Math.round(sum / arr.length);
+};
+
+console.log(average([]));
 module.exports = average;
