@@ -33,8 +33,22 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => {
+  // implementando as variaveis pois o lint reclamou de tamanho da linha
+  let num1 = number1;
+  let num2 = number2; 
+  return { sum: num1 + num2, mult: num1 * num2, div: Math.trunc(num1 / num2), sub: num1 - num2 };
+};
 
-const arrayGenerator = (type, object) => {};
+console.log(calculator(1,2));
 
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    return Object.keys(object);
+  } if (type === 'values') {
+    return Object.values(object);
+  } if (type === 'entries') {
+    return Object.entries(object);
+  }
+};
 module.exports = { calculator, arrayGenerator };
