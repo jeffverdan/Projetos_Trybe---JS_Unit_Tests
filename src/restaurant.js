@@ -44,6 +44,22 @@
   
 */
 
-const createMenu = () => {};
+function teste(obj) {
+  let array = [];
+  for (let key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      array.push(Object.keys(obj[key]));
+    }
+  }
+  return array;
+}
+
+console.log(teste());
+
+const createMenu = (objeto) => ({
+    fetchMenu: () => objeto,
+    consumption: teste(objeto),
+    order: '',
+});
 
 module.exports = createMenu;
