@@ -25,7 +25,14 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    fail('Teste vazio!');
+    expect(circle('1')).toBe(undefined);
+    expect(typeof circle(1)).toBe('object');
+    expect(Object.keys(circle(1)).length).toBe(3);
+    expect(circle()).toBe(undefined);
+    expect(Object.values(circle(2))[2]).toEqual(12.56);
+    expect(Object.values(circle(3))[1]).toBeCloseTo(28.26); //aqui eu poderia ter botado to equal e o valor grande (toEqual) igual fiz abaixo mas queria usar o toBeClose que foi basicamente a dica dada
+    expect(circle(3)).toEqual({radius: 3, area: 28.259999999999998, circumference: 18.84});
+
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
     // Teste se circle retorna um objeto.
