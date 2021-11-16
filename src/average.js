@@ -13,9 +13,7 @@
 */
 
 const average = (array) => {
-  if (!array) {
-    return un;
-  }
+  
 
   let sum = 0;
   for (let i in array) {
