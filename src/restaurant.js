@@ -44,29 +44,33 @@
   
 */
 
-const createMenu = (objeto, string) => {
-  const arrayChaves = Object.keys(objeto);
-  function total() {
-    let valorPedido = 0;
-    for (let chave of arrayChaves) {
-      const totalProdutos = Object.values(chave);
-      for (let totalProduto of totalProdutos) {
-        valorPedido += total;
-      }
-    }
-    return total + total * 0.1;
+const createMenu = (objeto) => {
+  const todosProdutos = Object.entries(objeto.food);
+  for (let bebidas of Object.entries(objeto.drinks)) {
+    todosProdutos.push(bebidas);
   }
 
-  const retorno = {
+  const consumo = [];
+
+  return { 
     fetchMenu: () => objeto,
-    consuption: arrayChaves,
-    order: () => arrayChaves.push(string),
-    pay: total(),
+    consuption: consumo,
+    order: (produto) => {
+      consumo.push(produto);
+    }, 
+    pay: () => {
+      let pagamentoTotal = 0;
+      for (let produtoConsumido of consumo) {
+        for (let produto of todosProdutos) {
+          if (produtoConsumido === produto[0]) {
+            pagamentoTotal += produto[1];
+          }
+        }
+      }
+      pagamentoTotal += pagamentoTotal * 0.1;
+      return pagamentoTotal.toFixed(2);
+    },
   };
-
-  return retorno;
 };
-
-console.log(createMenu);
 
 module.exports = createMenu;
