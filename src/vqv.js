@@ -16,6 +16,15 @@
       #VQV!'
 */
 
-const vqv = () => {};
-
+const vqv = (a, b) => {
+  let text;
+  if (typeof a === 'string' || typeof b === 'number') {
+    text = `Oi, meu nome é ${a}!
+Tenho ${b} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
+  }
+  return text;
+};
+// Achei estranho que se alinhar as quebras de linhas na concatenação, o retorno sai com espaço de alinhamento.
 module.exports = vqv;
