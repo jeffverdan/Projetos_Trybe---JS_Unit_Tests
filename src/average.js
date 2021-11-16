@@ -13,24 +13,19 @@
 */
 
 const average = (number) => {
-  const array = number;
-  let sumNumbers = 0
-  for (let i = 0; i < array.length; i +=1) {
-    if (array == '' || isNaN(array)) {
-      console.log(undefined)
-      // return undefined
-    } else {
-      for (let index = 0; index < array.length; index++) {
-        sumNumbers += array[index];
-      }
-      let media = sumNumbers / array.length
-      console.log(media);
+  let sumNumbers = 0;
+  for (let index = 0; index < number.length; index += 1) {
+    if (typeof number[index] === 'number') {
+      sumNumbers += number[index];
     }
+    // return Math.round(media)
   }
-  
-  // return Math.round(media)
+  let media = sumNumbers / number.length;
+    console.log(Math.round(media));
+  // return undefined;
+  console.log(undefined);
 };
-average([2, 2])
-
+average([2, 2]);
+// average();
 
 module.exports = average;
