@@ -13,13 +13,15 @@
 */
 
 const average = (valor) => {
-  if (valor === '' || !Number(valor)) {
-    return undefined;
-  }
-  let soma = 0;
   for (let i = 0; i < valor.length; i += 1) {
-    soma += valor[i];
+    if (valor === '' || valor[i] !== Number) {
+      return undefined;
+    }
   }
-  return soma / valor.length;
+  for (let index of valor) {
+    let soma = 0;
+    soma = valor[index];
+    return soma / valor.length;
+  }
 };
 module.exports = average;
