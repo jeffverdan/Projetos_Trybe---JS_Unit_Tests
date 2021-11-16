@@ -12,8 +12,25 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  
+const average = (listaArray) => {
+  // qtdNumArray guarda o tamanho do array;
+  const qtdNumArray = listaArray.length;
+  // cria a variavel que recebera a soma dos numeros do array;
+  let soma = 0;
+  // verifica se o array tem menos de 1 item entao nao é um array e retorna undefined;
+  if (listaArray.length < 1) {
+    return undefined;
+  }
+  // for para percorrer o array e o if para vericar se dentro do array tem alguma string se sim retorna undefined; se for numeros segue o codigo.
+  for (let key of listaArray) {
+    if (typeof (key) === 'string') {
+      return undefined;
+    }
+    // variavel soma recebe adiçao do valor do array;
+    soma += key;
+  }
+  // A função Math.round() retorna o valor de um número arredondado para o inteiro mais proximo.
+  return Math.round(soma / qtdNumArray);
 };
 
 module.exports = average;
