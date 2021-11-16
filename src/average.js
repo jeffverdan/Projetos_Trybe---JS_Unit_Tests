@@ -28,6 +28,4 @@ const average = (arr) => {
   return Math.round(result);
 };
 
-console.log(average([3,2]));
-
 module.exports = average;
