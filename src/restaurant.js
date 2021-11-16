@@ -57,18 +57,18 @@
 
 //------------------------------------------------------------------------------------------
 
-// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, 
+// PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro,
 // adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
-// DICA: para criar isso, você pode: 
+// DICA: para criar isso, você pode:
 // - Definir a função `createMenu()`
-// - Definir o objeto que a `createMenu()` retorna, mas separadamente 
+// - Definir o objeto que a `createMenu()` retorna, mas separadamente
 // - E, depois, definir a função que será atribuída a `order`.
 // ```
 // const restaurant = {}
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
 //
-// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`. 
+// const orderFromMenu = (request) => // Lógica que adiciona à chave `consumption` de `restaurant` a string recebida no parâmetro `request`.
 // // Essa função deve ser associada à chave `order` de `restaurant`
 // ```
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
@@ -79,6 +79,33 @@
 // que percorre por todos os itens de `objetoRetornado.consumption`, soma o preço deles e retorna o valor somado acrescido de 10%.
 // DICA: para isso, você precisará percorrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+function addComsumption(string) {
+  this.consumption.push(string);
+}
+
+// function findPrice(order, menu) {
+//   if (menu.food[order] !== undefined) {
+//     return menu.food[order];
+//   }
+//   return menu.drink[order];
+// }
+
+const createMenu = (menu) => ({
+  fetchMenu: () => menu,
+  consumption: [],
+  order: addComsumption,
+  pay() {
+    let total = 0;
+    this.consumption.forEach((order) => {
+      // Code v1
+      // let prices = findPrice(order, menu);
+      // Code v2
+      // total += menu.food[order] !== undefined ? menu.food[order] : menu.drink[order];
+      // code v3
+      total += menu.food[order] || menu.drink[order];
+    });
+    return total;
+  },
+});
 
 module.exports = createMenu;
