@@ -15,3 +15,5 @@
 const average = () => {};
 
 module.exports = average;
+
+console.log(average([2, 2]));
