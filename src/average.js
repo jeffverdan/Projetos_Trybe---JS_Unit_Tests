@@ -15,10 +15,9 @@ const verificarENumero = (numbers) => {
   for (let index = 0; index < numbers.length; index += 1) {
     // const numberConverted = Number(numbers[index]);
     // if(Number.isNaN(numberConverted)) {
-      //   console.log('esse nao é um numero');
-      // }
-    }
-   
+    //   console.log('esse nao é um numero');
+    // }
+  }
 };
 // console.log(verificarENumero([1, 2, 3, '4', 5]);
 

@@ -50,5 +50,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(ob1.endsWith('123')).toEqual(true) //USAR COMO EXEMPLO
     expect(ob2.endsWith('123')).toEqual(true)
 
+    //EU SOU DEMAIS
+
   });
 });
