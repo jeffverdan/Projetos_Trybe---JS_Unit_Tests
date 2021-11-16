@@ -44,6 +44,37 @@
   
 */
 
-const createMenu = () => {};
+const restaurant = {};
+
+// passo 3. Adicionando a string e jogando ela pro resturante consuption.
+const newMenuOrder = (string) => {
+  restaurant.consumption.push(string);
+};
+
+const price = () => {
+  let value = 0;
+  const drinkValue = restaurant.fetchMenu().drink;
+  const foodValue = restaurant.fetchMenu().food;
+
+  // separando foods de drink no valor e somando no value;
+  restaurant.consumption.forEach((valueItem) => {
+    if (drinkValue[valueItem]) {
+      value += drinkValue[valueItem];
+    } if (foodValue[valueItem]) {
+      value += foodValue[valueItem];
+    }
+  });
+
+  return value * 1.1; // adicionando 10%. parte da parte 4
+};
+
+const createMenu = (object) => {
+  restaurant.fetchMenu = () => object; // parte 1.
+  restaurant.consumption = []; // parte 2
+  restaurant.order = newMenuOrder; // parte 3 adicionando a funcao ao order.
+  restaurant.pay = price; // preço com 10% add. parte da parte 4;
+
+  return restaurant;
+};
 
 module.exports = createMenu;

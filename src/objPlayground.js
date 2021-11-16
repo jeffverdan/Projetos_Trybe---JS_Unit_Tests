@@ -40,7 +40,7 @@ const calculator = (number1, number2) => {
   return { sum: num1 + num2, mult: num1 * num2, div: Math.trunc(num1 / num2), sub: num1 - num2 };
 };
 
-console.log(calculator(1,2));
+console.log(calculator(1, 2));
 
 const arrayGenerator = (type, object) => {
   if (type === 'keys') {
