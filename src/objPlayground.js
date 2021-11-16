@@ -34,7 +34,7 @@
 */
 
 const calculator = (number1, number2) => {
-  calculadora = new Object();
+  const calculadora = new Object();
   calculadora.sum = number1 + number2;
   calculadora.mult = number1 * number2;
   calculadora.div = Math.floor(number1 / number2);
