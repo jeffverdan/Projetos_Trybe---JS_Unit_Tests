@@ -12,8 +12,7 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  let array = [];
+const average = (array) => {  
   let somaArray = 0;
   let mediaArray = somaArray / array.length;
   if (array !== Number || array.length === 0) {
