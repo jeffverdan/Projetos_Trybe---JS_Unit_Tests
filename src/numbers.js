@@ -17,5 +17,6 @@ const numbers = (myArray) => {
   }
   return true;
 };
-
+let a = numbers([1, 'a', 3]);
+console.log(a);
 module.exports = numbers;
