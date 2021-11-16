@@ -16,6 +16,16 @@
       #VQV!'
 */
 
-const vqv = () => {};
+const vqv = (nome, idade) => {
+  let retorno;
+  if (nome.length > 0 && Number.isInteger(idade)) {
+    retorno = `OI, meu nome é ${nome}!
+    Tenho ${idade} anos,
+    trabalho na Trybe e mando muito em programação!
+    #VQV!`;
+  }
+
+  return retorno;
+};
 
 module.exports = vqv;
