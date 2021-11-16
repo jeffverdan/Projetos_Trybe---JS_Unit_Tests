@@ -20,7 +20,7 @@ const average = (arr) => {
   }
 
   for (let i = 0; i < arr.length; i += 1) {
-    if (typeof arr[i] !== "number") {
+    if (typeof arr[i] !== 'number') {
       return undefined;
     }
     sam += arr[i];
