@@ -40,7 +40,7 @@ const calculator = (number1, number2) => {
   const divi = 0;
 
   return {
-    sum: number1 + number2 ,
+    sum: number1 + number2,
     mult: number1 * number2,
     div: number1 / number2,
     sub: number1 - number2,
