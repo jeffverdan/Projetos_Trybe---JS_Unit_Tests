@@ -21,3 +21,8 @@ describe('8 - Implemente a função `myCounter`', () => {
     expect(myCounter()).toEqual(expectedOutput);
   });
 });
+// test('funcionamento da funçao', () =>{
+//   expect(myCounter).toBeDefined();
+//   expect(typeof myCounter()).toEqual('object') //ou
+//   expect(Array.isArray(myCounter())).toEqual(true);
+// })
