@@ -34,11 +34,12 @@
 */
 
 const calculator = (number1, number2) => {
-  const calculadora = new Object();
-  calculadora.sum = number1 + number2;
-  calculadora.mult = number1 * number2;
-  calculadora.div = Math.floor(number1 / number2);
-  calculadora.sub = number1 - number2;
+  const calculadora = { 
+  sum = number1 + number2,
+  mult = number1 * number2,
+  div = Math.floor(number1 / number2),
+  sub = number1 - number2,
+  }
   return calculadora;
 };
 
