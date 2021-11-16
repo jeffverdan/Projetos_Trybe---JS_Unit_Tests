@@ -14,14 +14,12 @@
 
 const average = (a) => {
   let soma = 0;
-  if (a.length === 0) { return undefined;}  
-  else { 
-    for(let i = 0; i < a.length; i +=1) {
-      if (typeof a[i] !== 'number') { return undefined;}
-      soma += a[i];
-    }
+  if (a.length === 0) { return undefined; }  
+    for (let i = 0; i < a.length; i += 1) {
+      if (typeof a[i] !== 'number') { return undefined; }
+      soma += a[i];    
   }
-  soma = soma / a.length; 
+  soma = soma / a.length;
   return Math.round(soma); // Referencia: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 };
 
