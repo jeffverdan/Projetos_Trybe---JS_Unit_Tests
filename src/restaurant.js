@@ -44,6 +44,21 @@
   
 */
 
-const createMenu = () => {};
+const createMenu = (obj) => {
+  const restaurant = [];
+
+  restaurant.fetchMenu = () => obj;
+  restaurant.consumption = [];
+  restaurant.order = (request) => restaurant.consumption.push(request);
+  restaurant.pay = () => {
+    let total = 0;
+    restaurant.consumption.forEach((item) => {
+      total += obj.food[item] || obj.drink[item];
+    });
+    return total * 1.1;
+  };
+
+  return restaurant;
+};
 
 module.exports = createMenu;
