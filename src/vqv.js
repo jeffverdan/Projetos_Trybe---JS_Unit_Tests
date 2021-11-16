@@ -15,7 +15,6 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-
 const vqv = (name, value) => {
   if (name !== undefined || value !== undefined) {
   return `Oi, meu nome é ${name}!
