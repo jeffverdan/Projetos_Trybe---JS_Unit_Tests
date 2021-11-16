@@ -12,27 +12,37 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (array) => {
-  let retorno = 0;
-  if (array.length > 0) {
-    for (let number of array) {
-      if (Number.isInteger(number)) {
-        retorno += number;
-      } else {
-        retorno = undefined;
-        break;
-      }
-    }
-  } else {
-    retorno = undefined;
+const arrayIsEmpty = (array) => {
+  let isEmpty = false;
+  if (array.length === 0) {
+    isEmpty = true;
+  }
+  return isEmpty; 
+};
+
+const sum = (number1, number2) => {
+  let soma = NaN;
+  if (typeof number1 === 'number' && typeof number2 === 'number') {
+    soma = number1 + number2;
   }
 
-  if (retorno !== undefined) {
-    retorno /= array.length;
+  return soma;
+};
+
+const average = (array) => {
+  let retorno = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    retorno = sum(retorno, array[i]);
+    if (Number.isNaN(retorno)) {
+      retorno = undefined;
+      break;
+    }
   }
+  
+  if (arrayIsEmpty(array)) retorno = undefined;
+  if (retorno !== undefined) (retorno /= array.length);
 
   return retorno;
 };
 
-average([1, 2, 3, 4]);
 module.exports = average;
