@@ -1,9 +1,11 @@
-const vqv = (name, age) => {
-  const string = `Oi, meu nome é ${name}!
-Tenho ${age} anos,
-trabalho na Trybe e mando muito em programação!
-#VQV!`;
-  return string;
-}; console.log(vqv('Vinicius', 22));
+const circle = (radius) => {
+  const PI = 3.14;
 
-module.exports = vqv;
+  if (!radius || typeof radius !== 'number') { return undefined; }
+
+  return {
+    radius,
+    area: PI * radius * radius,
+    circumference: 2 * PI * radius,
+  }; 
+}; console.log(circle(2));
