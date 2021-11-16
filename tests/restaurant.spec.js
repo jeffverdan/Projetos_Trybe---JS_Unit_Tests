@@ -40,7 +40,7 @@ const createMenu = require('../src/restaurant');
 
   - Uma chave `pay` que, quando chamada, invoca uma função que soma o valor de todos os pedidos e dá o preço com acréscimo de 10%.
 
-  IMPORTANTE: FAÇA OS TESTES E PASSOS DE ACORDO COM A ORDEM INDICADA!
+  IMPORTANTE: FAÇA OS TESTES DE ACORDO COM A ORDEM INDICADA!
 
 */
 
