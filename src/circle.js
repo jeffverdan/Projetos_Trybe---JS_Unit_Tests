@@ -30,6 +30,6 @@ const circle = (radius) => {
     circumference: 2 * PI * radius,
   };
 };
-console.log(circle(3));
+// console.log(Object.keys(circle(3)).length);
 module.exports = circle;
-// console.log(Object.keys(circle(0)).length);
+console.log(Object.keys(circle(10)));
