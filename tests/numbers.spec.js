@@ -18,13 +18,13 @@ describe('2 - Implemente os casos de teste para a função `numbers`', () => {
   it('Verifica se numbers recebe [1, 2, 3, 4, 5] e retorna true', () => {
     expect(numbers([1, 2, 3, 4, 5])).toBeTruthy();
   });
-  it ("Verifica se numbers recebe [1, 2, '3', 4, 5] e retorna false", () => {
+  it("Verifica se numbers recebe [1, 2, '3', 4, 5] e retorna false", () => {
     expect(numbers([1, 2, '3', 4, 5])).toBeFalsy();
   });
-  it ("Verifica se numbers recebe [1, 'a', 3] e retorna false", () => {
+  it("Verifica se numbers recebe [1, 'a', 3] e retorna false", () => {
     expect(numbers([1, 'a', 3])).toBeFalsy();
   });
-  it ("Verifica se numbers recebe [' '] e retorna false", () => {
+  it("Verifica se numbers recebe [' '] e retorna false", () => {
     expect(numbers([' '])).toBeFalsy();
   });
 });
