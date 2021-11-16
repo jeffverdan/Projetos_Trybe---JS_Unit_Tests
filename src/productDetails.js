@@ -39,4 +39,8 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+const teste = productDetails('mascara', 'alcool');
+let palavra = teste[0].details.productId;
+palavra = palavra.slice(7, 10);
+
 module.exports = productDetails;

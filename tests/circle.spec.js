@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
-const circle = require('../src/circle');
+const circle = require("../src/circle");
 
 /*
   Essa função recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência).
@@ -23,27 +23,33 @@ const circle = require('../src/circle');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('4 - Implemente os casos de teste para a função `circle`', () => {
-  it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
+describe("4 - Implemente os casos de teste para a função `circle`", () => {
+  it("Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados", () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
-    expect(circle('7')).toBeUndefined();
+    expect(circle("7")).toBeUndefined();
     // Teste se circle retorna um objeto.
-    // Referência do código abaixo: https://stackoverflow.com/questions/46103811/how-to-check-for-object-properties-match-for-an-object-using-jest 
-    expect(circle(4)).toEqual(expect.objectContaining({
-      radius: expect.any(Number),
-      area: expect.any(Number),
-      circumference: expect.any(Number)
-    }))
+    // Referência do código abaixo: https://stackoverflow.com/questions/46103811/how-to-check-for-object-properties-match-for-an-object-using-jest
+    expect(circle(4)).toEqual(
+      expect.objectContaining({
+        radius: expect.any(Number),
+        area: expect.any(Number),
+        circumference: expect.any(Number),
+      })
+    );
     // Teste se o objeto retornado tem 3 propriedades.
-    expect(circle(2)).toHaveProperty('radius', 'area', 'circumference')
+    expect(circle(2)).toHaveProperty("radius", "area", "circumference");
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     expect(circle()).toBeUndefined();
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    expect(circle(2)).toMatchObject({circumference:12.56})
+    expect(circle(2)).toMatchObject({ circumference: 12.56 });
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    expect(circle(3).area).toBeCloseTo(28.26)
+    expect(circle(3).area).toBeCloseTo(28.26);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    expect(circle(3)).toMatchObject({radius: 3, area: 28.259999999999998, circumference: 18.84})
+    expect(circle(3)).toMatchObject({
+      radius: 3,
+      area: 28.259999999999998,
+      circumference: 18.84,
+    });
   });
 });
