@@ -20,13 +20,13 @@ const myCounter = () => {
   var myArray = [];
   for (let counter = 0; counter <= 3; counter += 1) {
     myArray.push(counter);
-    for (let counterr = 2; counter <= 3; counter += 1) {
+    for (let counterr = 2; counterr <= 3; counterr += 1) {
       myArray.push(counterr);
     }
   }
   return myArray;
 };
 
-module.exports = myCounter;
-
 console.log(myCounter());
+
+module.exports = myCounter;
