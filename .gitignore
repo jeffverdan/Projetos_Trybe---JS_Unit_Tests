@@ -1,1 +1,9 @@
+.github/
+.trybe/
 node_modules/
+.eslintignore
+.eslintrc.json
+package-lock.json
+package.json
+README.md
+trybe.yml
