@@ -13,8 +13,8 @@
 */
 
 const verifyTypeOf = (array) => {
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] !== 'number') {return false;}
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') { return false; }
   }
   return true;
 };
@@ -22,11 +22,11 @@ const verifyTypeOf = (array) => {
 const average = (array) => {
   let media = 0;
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     media += array[i];
   }
 
-  media = Math.round(media/array.length);
+  media = Math.round(media / array.length);
 
   if (verifyTypeOf(array) && array.length !== 0) {
     return media;
