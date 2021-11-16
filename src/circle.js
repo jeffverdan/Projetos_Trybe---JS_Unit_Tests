@@ -24,11 +24,13 @@ const circle = (radius) => {
 
   if (!radius || typeof radius !== 'number') { return undefined; }
 
-  return {
+  console.log({
     radius,
     area: PI * radius * radius,
     circumference: 2 * PI * radius,
-  };
+  });
 };
 
 module.exports = circle;
+
+circle(2);
