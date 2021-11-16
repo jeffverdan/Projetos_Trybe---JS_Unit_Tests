@@ -17,7 +17,6 @@
 */
 
 const vqv = (string, num) => {
-  console.log(string, num);
   if (string === undefined || num === undefined) {
     return undefined;
   }
@@ -26,5 +25,5 @@ Tenho ${num} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
 };
-vqv()
+
 module.exports = vqv;
