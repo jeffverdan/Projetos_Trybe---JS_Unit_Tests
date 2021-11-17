@@ -43,7 +43,37 @@
   - Uma chave `pay` que, quando chamada, invoca uma função que soma o valor de todos os pedidos e dá o preço com acréscimo de 10%.
   
 */
+// let consumption = [];
+function addPedido (string) {
+  this.consumption.push(string);  //Ref: https://stackoverflow.com/questions/36539042/how-to-use-this-keyword-inside-array-in-javascript
+};
 
-const createMenu = () => {};
+const createMenu = (menu) => ({
+  fetchMenu: () => menu,
+  consumption: [],
+  order: addPedido,
+  pay: () => {
+    let soma = 0;
+    this.consumption.forEach((order) => {
+     soma +=  menu.food[order] + menu.drink[order];
+   });
+   return soma;
+  },
+});
 
 module.exports = createMenu;
+
+const menu = {
+  food: {
+    coxinha: 5,
+    picanha: 10,        
+  },
+  drink: {
+    agua: 5,
+    vodka: 10,
+  },
+};
+menu.order('coxinha');
+menu.order('vodka');
+menu.order('coxinha');  
+console.log(menu);
