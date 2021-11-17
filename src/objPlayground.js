@@ -40,6 +40,17 @@ const calculator = (number1, number2) => ({
   sub: number1 - number2,
 });
 
-const arrayGenerator = (type, object) => { };
+let resultado = [];
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    resultado = Object.keys(object);
+  }
+  if (type === 'values') {
+    resultado = Object.values(object);
+  }
+  if (type === 'entries') {
+    resultado = Object.entries(object);
+  } return resultado;
+};
 
 module.exports = { calculator, arrayGenerator };
