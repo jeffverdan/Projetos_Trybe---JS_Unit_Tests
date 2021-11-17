@@ -45,8 +45,8 @@
 */
 // let consumption = [];
 function addPedido(string) {
-  this.consumption.push(string);  //Ref: https://stackoverflow.com/questions/36539042/how-to-use-this-keyword-inside-array-in-javascript
-};
+  this.consumption.push(string);  // Ref:https://stackoverflow.com/questions/36539042/how-to-use-this-keyword-inside-array-in-javascript
+}
 
 const createMenu = (menu) => ({
   fetchMenu: () => menu,
