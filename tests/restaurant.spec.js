@@ -101,7 +101,7 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objetoRetornado6.order('agua');
     objetoRetornado6.order('sopa');
     objetoRetornado6.order('sashimi');
-    expect(objetoRetornado6.consumption).toEqual(['coxinha','agua','sopa','sashimi']);
+    expect(objetoRetornado6.consumption).toEqual(['coxinha', 'agua', 'sopa', 'sashimi']);
 
     // TESTE 7: Verifique se a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
     // ```
@@ -113,8 +113,8 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     const objetoRetornado7 = createMenu();
     objetoRetornado7.order('coxinha');
     objetoRetornado7.order('agua');
-    objetoRetornado7.order('coxinha');    
-    expect(objetoRetornado7.consumption).toEqual(['coxinha','agua','coxinha']);
+    objetoRetornado7.order('coxinha');
+    expect(objetoRetornado7.consumption).toEqual(['coxinha', 'agua', 'coxinha']);
 
     // TESTE 8: Verifique se, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```
@@ -126,7 +126,7 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     const menu = {
       food: {
         coxinha: 5,
-        picanha: 10,        
+        picanha: 10,
       },
       drink: {
         agua: 5,
@@ -136,7 +136,7 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     const objetoRetornado8 = createMenu();
     objetoRetornado8.order('coxinha');
     objetoRetornado8.order('vodka');
-    objetoRetornado8.order('coxinha');    
+    objetoRetornado8.order('coxinha');
     expect(objetoRetornado8.pay()).toBe(20);
   });
 });

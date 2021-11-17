@@ -40,6 +40,6 @@ const calculator = (number1, number2) => ({
   sub: number1 - number2,
 });
 
-const arrayGenerator = (type, object) => {};
+const arrayGenerator = (type, object) => { };
 
 module.exports = { calculator, arrayGenerator };
