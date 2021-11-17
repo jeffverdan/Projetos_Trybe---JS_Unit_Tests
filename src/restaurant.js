@@ -43,9 +43,9 @@
   - Uma chave `pay` que, quando chamada, invoca uma função que soma o valor de todos os pedidos e dá o preço com acréscimo de 10%.
   
 */
-// let consumption = [];
+// let consumption = []; Ref:https://stackoverflow.com/questions/36539042/how-to-use-this-keyword-inside-array-in-javascript
 function addPedido(string) {
-  this.consumption.push(string);  // Ref:https://stackoverflow.com/questions/36539042/how-to-use-this-keyword-inside-array-in-javascript
+  this.consumption.push(string); 
 }
 
 const createMenu = (menu) => ({
